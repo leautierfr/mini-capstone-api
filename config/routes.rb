@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/all_products" => "products#all_products"
-  get "xbox" => "products#xbox"
-  get "playstation" => "products#playstation"
-  get "computer" => "products#computer"
+  # get "xbox" => "products#xbox"
+  # get "playstation" => "products#playstation"
+  # get "computer" => "products#computer"
+  get "/one_product/:id" => "products#one_product"
 end
