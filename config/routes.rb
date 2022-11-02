@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/all_products" => "products#all_products"
+  get "xbox" => "products#xbox"
+  get "playstation" => "products#playstation"
+  get "computer" => "products#computer"
 end
