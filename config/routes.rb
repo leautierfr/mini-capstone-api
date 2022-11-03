@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # get "computer" => "products#computer"
   get "/products/:id" => "products#show"
   post "/products/" => "products#create"
+  patch "/products/:id" => "products#update"
 end
