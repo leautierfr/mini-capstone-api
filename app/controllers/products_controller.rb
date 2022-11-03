@@ -26,10 +26,10 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.new(
-      name: "Steam Deck",
-      price: 300,
-      image_url: "https://knowthisapp.com/wp-content/uploads/2021/08/everything-you-need-to-know-about-steam-deck.jpg",
-      description: "Valve's latest portable console",
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
     )
     product.save
     render json: product.as_json

@@ -1,5 +1,13 @@
 ### Create 
 POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+"name": "Switch",
+"price": "150",
+"image_url": "https://media.wired.com/photos/59e9503a19bfcb28a5b3c026/master/w_2400,c_limit/Switch_TA.jpg",
+"description": "Nintendo's latest portable game console"
+}
 
 ### Index
 GET http://localhost:3000/products.json
