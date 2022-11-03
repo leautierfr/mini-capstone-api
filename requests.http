@@ -1,0 +1,8 @@
+### Create 
+POST http://localhost:3000/products.json
+
+### Index
+GET http://localhost:3000/products.json
+
+### Show
+GET http://localhost:3000/products/1.json

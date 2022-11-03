@@ -23,4 +23,15 @@ class ProductsController < ApplicationController
     product = Product.find_by(id: params["id"])
     render json: product.as_json
   end
+
+  def create
+    product = Product.new(
+      name: "Steam Deck",
+      price: 300,
+      image_url: "https://knowthisapp.com/wp-content/uploads/2021/08/everything-you-need-to-know-about-steam-deck.jpg",
+      description: "Valve's latest portable console",
+    )
+    product.save
+    render json: product.as_json
+  end
 end

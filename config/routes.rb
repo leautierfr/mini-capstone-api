@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # get "playstation" => "products#playstation"
   # get "computer" => "products#computer"
   get "/products/:id" => "products#show"
+  post "/products/" => "products#create"
 end
