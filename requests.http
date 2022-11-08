@@ -3,10 +3,11 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "Mobile",
-"price": "300",
-"image_url": "https://www.techandroids.com/wp-content/uploads/2018/06/Asus-ROG-Phone-image-1.jpg",
-"description": "Asus' latest gaming mobile phone"
+"name": "PSP",
+"price": 12,
+"image_url": "https://cdn.afterdawn.fi/v3/news/original/Sony-PSP-1000-official.png",
+"description": "hi"
+
 }
 
 ### Index
