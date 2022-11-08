@@ -3,10 +3,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-"name": "Switch",
-"price": "150",
-"image_url": "https://media.wired.com/photos/59e9503a19bfcb28a5b3c026/master/w_2400,c_limit/Switch_TA.jpg",
-"description": "Nintendo's latest portable game console"
+"name": "Mobile",
+"price": "300",
+"image_url": "https://www.techandroids.com/wp-content/uploads/2018/06/Asus-ROG-Phone-image-1.jpg",
+"description": "Asus' latest gaming mobile phone"
 }
 
 ### Index
@@ -17,11 +17,12 @@ GET http://localhost:3000/products/1.json
 
 ### Update 
 
-PATCH http://localhost:3000/products/5.json
+PATCH http://localhost:3000/products/6.json
 Content-Type: application/json
 
 {
-  "image_url" : "https://images.nintendolife.com/news/2018/07/the_nintendo_switch_is_headed_to_turkey_but_will_cost_customers_almost_usd500/attachment/0/original.jpg"
+  "image_url" : "https://images.nintendolife.com/news/2018/07/the_nintendo_switch_is_headed_to_turkey_but_will_cost_customers_almost_usd500/attachment/0/original.jpg",
+  "description" : "Nintendo's lamest portable console"
 }
 
 ### Delete
