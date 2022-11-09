@@ -5,7 +5,6 @@ Content-Type: application/json
 {
 "name": "PSP",
 "price": 12,
-"image_url": "https://cdn.afterdawn.fi/v3/news/original/Sony-PSP-1000-official.png",
 "description": "hi"
 
 }
@@ -22,9 +21,8 @@ PATCH http://localhost:3000/products/6.json
 Content-Type: application/json
 
 {
-  "image_url" : "https://images.nintendolife.com/news/2018/07/the_nintendo_switch_is_headed_to_turkey_but_will_cost_customers_almost_usd500/attachment/0/original.jpg",
   "description" : "hello"
 }
 
 ### Delete
-DELETE http://localhost:3000/products/5.json
+DELETE http://localhost:3000/products/6.json
