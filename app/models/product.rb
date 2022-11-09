@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :images
+  belongs_to :supplier
   # validates :name, presence: true
   # validates :name, uniqueness: true
   # validates :price, presence: true
@@ -25,7 +27,7 @@ class Product < ApplicationRecord
     Supplier.find_by(id: supplier_id)
   end
 
-  def images
-    Image.where(product_id: id)
-  end
+  # def images
+  #   Image.where(product_id: id)
+  # end
 end
