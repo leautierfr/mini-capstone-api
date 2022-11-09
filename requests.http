@@ -4,9 +4,9 @@ Content-Type: application/json
 
 {
 "name": "PSP",
-"price": 12,
-"description": "hi"
-
+"price": 50,
+"description": "Sony's oldest portable game console",
+"supplier_id": 1
 }
 
 ### Index
