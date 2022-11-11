@@ -1,3 +1,6 @@
+@adjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
+@gjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNSwiZXhwIjoxNjY4Mjg0NDQ0fQ.rihQV1_rJxGZ-p4IVIjC7WBPgjRx08hIx6kIRRRlQ2E
+
 ### Create product
 POST http://localhost:3000/products.json
 Content-Type: application/json
@@ -11,8 +14,7 @@ Content-Type: application/json
 
 ### Index product
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgxOTU0OTd9.Al8ZluasaQZi_pkPse9jPy1nWjx0xT4_cUFcwuaEOag
-
+Authorization: Bearer {{adjwt}}
 
 ### Show product
 GET http://localhost:3000/products/1.json
@@ -27,6 +29,7 @@ Content-Type: application/json
 }
 
 ### Delete product
+
 DELETE http://localhost:3000/products/6.json
 
 ### Users create (signup)
@@ -34,8 +37,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Billy",
-  "email": "billy@example.com",
+  "name": "mindy",
+  "email": "mindy@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -45,7 +48,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "billy@example.com",
+  "email": "mindy@example.com",
   "password": "password"
 }
 
@@ -63,7 +66,7 @@ Content-Type: application/json
 ### Create Order
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
+Authorization: Bearer 
 
 {
 "product_id": 4,
@@ -72,8 +75,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1O
 
 ### Show Order
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
+Authorization:  Bearer {{gjwt}}
 
 ### Index Order
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
