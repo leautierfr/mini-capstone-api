@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   get "/users" => "users#index"
 
   post "/sessions" => "sessions#create"
+
+  post "/orders/" => "orders#create"
+  get "/orders/:id" => "orders#show"
+  get "/orders/" => "orders#index"
 end

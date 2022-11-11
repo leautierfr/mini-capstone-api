@@ -1,4 +1,4 @@
-### Create 
+### Create product
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
@@ -9,13 +9,15 @@ Content-Type: application/json
 "supplier_id": 1
 }
 
-### Index
+### Index product
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgxOTU0OTd9.Al8ZluasaQZi_pkPse9jPy1nWjx0xT4_cUFcwuaEOag
 
-### Show
+
+### Show product
 GET http://localhost:3000/products/1.json
 
-### Update 
+### Update product
 
 PATCH http://localhost:3000/products/6.json
 Content-Type: application/json
@@ -24,7 +26,7 @@ Content-Type: application/json
   "description" : "hello"
 }
 
-### Delete
+### Delete product
 DELETE http://localhost:3000/products/6.json
 
 ### Users create (signup)
@@ -49,7 +51,6 @@ Content-Type: application/json
 
 ### Photos create
 POST http://localhost:3000/photos.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
 Content-Type: application/json
 
 {
@@ -57,3 +58,22 @@ Content-Type: application/json
   "width": 640,
   "height": 480
 }
+
+
+### Create Order
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
+
+{
+"product_id": 4,
+"quantity": 2
+}
+
+### Show Order
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
+
+### Index Order
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
