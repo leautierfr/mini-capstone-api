@@ -6,5 +6,5 @@ class Category < ApplicationRecord
   #   category_products.map do |category_product|
   #     category_product.product
   #   end
-  end
+  # end
 end
