@@ -1,9 +1,10 @@
-@adjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzU1OTV9.oN3VWbLPph6WX1cPzQ8Cl_Ly7rgbAv7QDthkC-9E_Vc
-@gjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNSwiZXhwIjoxNjY4Mjg0NDQ0fQ.rihQV1_rJxGZ-p4IVIjC7WBPgjRx08hIx6kIRRRlQ2E
+@adjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNiwiZXhwIjoxNjcxODE4MzE3fQ._OYN7uSI3vd4HJvSkqcJEzMbJj_l-DgvYIciai4qgMc
+@gjwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNSwiZXhwIjoxNjcxODE3NzQwfQ.4-kxd5XZF8NhZzShEXHtM7UocvWCzw0qZYll2GcDUdE
 
 ### Create product
 POST http://localhost:3000/products.json
 Content-Type: application/json
+Authorization: Bearer {{adjwt}}
 
 {
 "name": "PSP",
@@ -17,12 +18,13 @@ GET http://localhost:3000/products.json
 Authorization: Bearer {{adjwt}}
 
 ### Show product
-GET http://localhost:3000/products/1.json
+GET http://localhost:3000/products/10.json
 
 ### Update product
 
-PATCH http://localhost:3000/products/6.json
+PATCH http://localhost:3000/products/10.json
 Content-Type: application/json
+Authorization: Bearer {{adjwt}}
 
 {
   "description" : "hello"
@@ -30,15 +32,16 @@ Content-Type: application/json
 
 ### Delete product
 
-DELETE http://localhost:3000/products/6.json
+DELETE http://localhost:3000/products/10.json
+Authorization: Bearer {{adjwt}}
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "mindy",
-  "email": "mindy@example.com",
+  "name": "Luke",
+  "email": "luke@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -48,25 +51,25 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "mindy@example.com",
+  "email": "luke@example.com",
   "password": "password"
 }
 
 ### Photos create
-POST http://localhost:3000/photos.json
-Content-Type: application/json
+# POST http://localhost:3000/photos.json
+# Content-Type: application/json
 
-{
-  "name": "Test name",
-  "width": 640,
-  "height": 480
-}
+# {
+#   "name": "Test name",
+#   "width": 640,
+#   "height": 480
+# }
 
 
 ### Create Order
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer {{gjwt}}
+Authorization: Bearer {{adjwt}}
 
 {
 "product_id": 4,
@@ -79,3 +82,17 @@ Authorization:  Bearer {{gjwt}}
 
 ### Index Order
 GET http://localhost:3000/orders.json
+
+### Create CartedProducts
+POST http://localhost:3000/carted_products.json 
+Content-Type: application/json
+Authorization: Bearer {{gjwt}}
+
+{
+ "product_id": 2,
+ "quantity": 1
+}
+
+### Index Carted Products
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer {{gjwt}}
